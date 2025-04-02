@@ -1,0 +1,93 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.map-container {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+}
+
+.custom-popup {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+
+.custom-popup h3 {
+  margin-top: 10px; 
+}
+
+.custom-popup button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #E64A1A;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.custom-popup .close-btn {  
+  position: absolute;
+  padding: 6px 10px;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border-radius: 5px;
+  background-color: #5D0000;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.esri-credit {
+  position: absolute;
+  top: 50px; /* Distance from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10; /* Ensures it stays on top */
+}
+
+
+/* .atlas-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.atlas-image {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+
+.atlas-content {
+  padding: 20px;
+  font-size: 14px;
+} */
