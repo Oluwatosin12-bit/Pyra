@@ -14,15 +14,11 @@ const PyraAI = () => {
   const ASSISTANT_ID = "dcffac15-078f-48d8-bcc3-94e7e3fd1d9d";
 
   useEffect(() => {
-    console.log(import.meta.env.VITE_API_KEY);
-    console.log("hello")
-  }, []);
-  useEffect(() => {
     const createSession = async () => {
       try {
         const response = await axios.post("https://agentivehub.com/api/chat/session", {
-          api_key: import.meta.env.VITE_API_KEY,
-          assistant_id: import.meta.env.VITE_ASSISTANT_ID,
+          api_key: API_KEY,
+          assistant_id: ASSISTANT_ID,
         });
         setSessionId(response.data.session_id);
       } catch (error) {
