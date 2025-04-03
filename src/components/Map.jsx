@@ -20,13 +20,18 @@ const Map = () => {
       "esri/symbols/PictureMarkerSymbol"
     ])
       .then(([Map, MapView, Graphic, GraphicsLayer, PictureMarkerSymbol]) => {
-        const map = new Map({ basemap: "streets-navigation-vector" });
+        const map = new Map({ basemap: "gray-vector" });
 
         const view = new MapView({
           container: mapRef.current,
           map: map,
           center: [-80.254, 36.036], // Winston-Salem
           zoom: 12
+        });
+        const structureSymbol = new PictureMarkerSymbol({
+          url: "/Pyra icon.png", 
+          width: "24px",
+          height: "24px"
         });
 
         const graphicsLayer = new GraphicsLayer();
@@ -41,11 +46,7 @@ const Map = () => {
 
           const graphic = new Graphic({
             geometry: { type: "point", longitude, latitude },
-            symbol: {
-              type: "simple-marker",
-              color: [226, 119, 40],
-              outline: { color: [255, 255, 255], width: 2 }
-            },
+            symbol: structureSymbol,
             attributes: { ...structure, type: "structure" }
           });
 

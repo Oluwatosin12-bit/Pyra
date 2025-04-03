@@ -5,6 +5,7 @@ import Map from "../components/Map";
 import "../App.css";
 import "./Atlas.css";
 
+
 const Atlas = () => {
   const { id } = useParams();
   const structure = data.find((item) => item.ProjectID === id);
